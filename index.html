@@ -1,139 +1,161 @@
 <html>
 <head>
 <title>PhD student welcoming email template</title>
+<script type="text/javascript">
+  function randomizeOptions(){
+    console.log('Random!')
+    var allSelects = document.getElementsByTagName("select");
+    for(var i=0;i<allSelects.length;i++){
+      var jj = Math.floor(Math.random() * (allSelects[i].options.length-1)) + 2;
+      allSelects[i].value = jj;
+      console.log(jj);
+    }
+    var unis = ['Awesome', 'Best', 'Very best', 'Prestigious', 'Most Venerable', 'Interdisciplinary', 'Oldest','Newest', 'Largest'];
+    var unis2 = ['College', 'University', 'School', 'Institute'];
+    var programs = ['Material Science','Philosophy','Physics','Literature','Creative Lying','Infinite Math','Impossible Biology','Experimental Pain']
+
+    document.getElementById('program').value = programs[ Math.floor(Math.random() * (programs.length))];
+    document.getElementById('uni').value = unis[ Math.floor(Math.random() * (unis.length))] + ' '+unis2[ Math.floor(Math.random() * (unis2.length))];
+
+
+  }
+
+</script>
 </head>
 <body style="font-size:130%;line-height:140%;">
   <style>
     select,input {font-size:110%;}
     </style>
 <div style="xwidth:800px;">
-  <h2>Template for PI welcoming new student to the lab (<a href="https://github.com/aandreev0/phd-template">github repo</a>)</h2>
-<p>Welcome to your PhD program in <input length="100" value="program"> at <input length="100" value="university">!
+  <h2>Template for PI welcoming new student to the lab</h2>
+  <a href="#" onClick="randomizeOptions()">Randomize</a> ♻️
+<p>Welcome to your PhD program in <input length="100" value="program" id="program"> at the <input length="130" value="university" id="uni">!
 
 <p>You will be working
 <select>
-  <option value=""></option>
-  <option value="">mostly on your own</option>
-  <option value="">with my occasional supervision</option>
-  <option value="">with my constant supervision</option>
-  <option value="">with constant supervision of a postdoc</option>
+  <option value="1"></option>
+  <option value="2">mostly on your own</option>
+  <option value="3">with my occasional supervision</option>
+  <option value="4">with my constant supervision</option>
+  <option value="5">with constant supervision of a postdoc</option>
 </select>
 
 <p>Your project for the PhD
   <select>
-    <option value=""></option>
-    <option value="">will be picked and pitched by you</option>
-    <option value="">will be loosely based on current work in lab</option>
-    <option value="">will closely follow ongoing project</option>
+    <option value="1"></option>
+    <option value="2">will be picked and pitched by you</option>
+    <option value="3">will be loosely based on current work in lab</option>
+    <option value="4">will closely follow ongoing project</option>
   </select>
 
 <p>As your PI, I expect that you
   <select>
-    <option value=""></option>
-    <option value="">show up to lab 9-5</option>
-    <option value="">work 8-7 at least</option>
-    <option value="">pick your own hours</option>
-    <option value="">work as much as humanly possible</option>
+    <option value="1"></option>
+    <option value="2">show up to lab 9-5</option>
+    <option value="3">work 8-7 at least</option>
+    <option value="4">pick your own hours</option>
+    <option value="5">work as much as humanly possible</option>
   </select> and
   <select>
-    <option value=""></option>
-    <option value="">have flexible schedule</option>
-    <option value="">be here when I am here</option>
+    <option value="1"></option>
+    <option value="2">have flexible schedule</option>
+    <option value="3">be here when I am here</option>
   </select>
 <p>Work on weekends is
 <select>
-  <option value=""></option>
-  <option value="">expected and essential</option>
-  <option value="">OK only when necessary</option>
-  <option value="">should be followed by reduced hours during next week</option>
+  <option value="1"></option>
+  <option value="2">expected and essential</option>
+  <option value="3">OK only when necessary</option>
+  <option value="4">should be followed by reduced hours during next week</option>
 </select>
 <p>If you want to take time off
 <select>
-  <option value=""></option>
-  <option value="">I need to know 30 days in advance</option>
-  <option value="">it is possible based on current research/grant deadlines</option>
-  <option value="">we follow standard University policies</option>
-  <option value="">do it only after 2nd year</option>
+  <option value="1"></option>
+  <option value="2">I need to know 30 days in advance</option>
+  <option value="3">it is possible based on current research/grant deadlines</option>
+  <option value="4">we follow standard University policies</option>
+  <option value="5">do it only after 2nd year</option>
 </select>
 
 <p>I expect that you respond to my emails
 <select>
-  <option value=""></option>
-  <option value="">immediately</option>
-  <option value="">within 3-6 hours</option>
-  <option value="">within 24 hours</option>
+  <option value="1"></option>
+  <option value="2">immediately</option>
+  <option value="3">within 3-6 hours</option>
+  <option value="4">within 24 hours</option>
 </select>
 
 <p>Successfull PhD thesis requires at least
   <select>
-    <option value=""></option>
-    <option value="">one published first-author paper in journal with IF>20</option>
-    <option value="">several first/mid-author papers</option>
-    <option value="">few submitted or accepted papers</option>
-    <option value="">one preprint or a few conference presentations</option>
+    <option value="1"></option>
+    <option value="2">one published first-author paper in journal with IF>20</option>
+    <option value="3">several first/mid-author papers</option>
+    <option value="4">few submitted or accepted papers</option>
+    <option value="5">one preprint or a few conference presentations</option>
   </select>
 
 <p>Your qualifying exam
   <select>
-    <option value=""></option>
-    <option value="">is a presentation of research plan</option>
-    <option value="">requires a bit of preliminary data</option>
-    <option value="">requires data and concrete results</option>
-    <option value="">requires a draft of a paper</option>
+    <option value="1"></option>
+    <option value="2">is a presentation of research plan</option>
+    <option value="3">requires a bit of preliminary data</option>
+    <option value="4">requires data and concrete results</option>
+    <option value="5">requires a draft of a paper</option>
   </select> and
   <select>
-    <option value=""></option>
-    <option value="">includes exam based on coursework</option>
-    <option value="">has no exam requirements</option>
+    <option value="1"></option>
+    <option value="2">includes exam based on coursework</option>
+    <option value="3">has no exam requirements</option>
   </select>
 <p>Thesis manuscript
   <select>
-    <option value=""></option>
-    <option value="">can be "stapled papers" with original intro</option>
-    <option value="">should be completely original, no copy-pasting</option>
+    <option value="1"></option>
+    <option value="2">can be "stapled papers" with original intro</option>
+    <option value="3">should be completely original, no copy-pasting</option>
   </select>
   <p>When writing your first-author papers
     <select>
-      <option value=""></option>
-      <option value="">you make the first draft, I will edit</option>
-      <option value="">I will do most of the writing</option>
-      <option value="">I will provide only limited editing</option>
+      <option value="1"></option>
+      <option value="2">you make the first draft, I will edit</option>
+      <option value="3">I will do most of the writing</option>
+      <option value="4">I will provide only limited editing</option>
     </select>
 
 <p>Travel to conferences
   <select>
-    <option value=""></option>
-    <option value="">will be on your own dime/funding</option>
-    <option value="">will be funded by the the lab once a year</option>
-    <option value="">is discouraged</option>
-    <option value="">is prohibited until paper is out</option>
+    <option value="1"></option>
+    <option value="2">will be on your own dime/funding</option>
+    <option value="3">will be funded by the the lab once a year</option>
+    <option value="4">is discouraged</option>
+    <option value="5">is prohibited until paper is out</option>
   </select>
 
   <p>Our one-on-one meetings
     <select>
-      <option value=""></option>
-      <option value="">will happen sporadically</option>
-      <option value="">are weekly</option>
-      <option value="">happen any time I pop into the lab</option>
+      <option value="1"></option>
+      <option value="2">will happen sporadically</option>
+      <option value="3">are weekly</option>
+      <option value="4">happen any time I pop into the lab</option>
     </select>
     and our lab meetings are
     <select>
-      <option value=""></option>
-      <option value="">not happening</option>
-      <option value="">a practice for your job talk</option>
-      <option value="">a short presentation of recent results</option>
-      <option value="">a discussion of any problem you have</option>
+      <option value="1"></option>
+      <option value="2">not happening</option>
+      <option value="3">a practice for your job talk</option>
+      <option value="4">a short presentation of recent results</option>
+      <option value="5">a discussion of any problem you have</option>
     </select>
 
 <p>Collaborations with other labs <select>
-      <option value=""></option>
-      <option value="">are essential</option>
-      <option value="">are prohibited</option>
-      <option value="">should be minimal</option>
-      <option value="">are encouraged, you should look for one</option>
+      <option value="1"></option>
+      <option value="2">are essential</option>
+      <option value="3">are prohibited</option>
+      <option value="4">should be minimal</option>
+      <option value="5">are encouraged, you should look for one</option>
     </select>
 </div>
 
-
+<hr>
+<p style="font-size:100%;">Pull requests welcome in <a href="https://github.com/aandreev0/phd-template">github repo</a>
   </body>
   </html>
