@@ -12,9 +12,11 @@
     var unis = ['Awesome', 'Best', 'Very best', 'Prestigious', 'Most Venerable', 'Interdisciplinary', 'Oldest','Newest', 'Largest'];
     var unis2 = ['College', 'University', 'School', 'Institute'];
     var programs = ['Material Science','Philosophy','Physics','Literature','Creative Lying','Infinite Math','Impossible Biology','Experimental Pain']
-
+    var profs = ['Dr. X', 'Professor Moriarty', 'Prof. Farnsworth', 'Dr. Doom', 'Your nightmare', 'Dr. Manhattan', 'Frau Farbissina', 'Dr. Evil', 'Dr. Who','Dr. Natalie Barnes', 'Mary Kruger']
     document.getElementById('program').value = programs[ Math.floor(Math.random() * (programs.length))];
     document.getElementById('uni').value = unis[ Math.floor(Math.random() * (unis.length))] + ' '+unis2[ Math.floor(Math.random() * (unis2.length))];
+    document.getElementById('name').value = profs[ Math.floor(Math.random() * (profs.length))];
+
   }
 
 </script>
@@ -63,7 +65,7 @@
   <option value="1"></option>
   <option value="2">expected and essential</option>
   <option value="3">OK only when necessary</option>
-  <option value="4">should be followed by reduced hours during next week</option>
+  <option value="4">followed by reduced hours during next week</option>
 </select>
 <p>If you want to take time off
 <select>
@@ -82,7 +84,7 @@
   <option value="4">within 24 hours</option>
 </select>
 
-<p>Successfull PhD thesis requires at least
+<p>Successful PhD thesis requires at least
   <select>
     <option value="1"></option>
     <option value="2">one published first-author paper in journal with IF>20</option>
@@ -151,7 +153,7 @@
       <option value="5">are encouraged, you should look for one</option>
     </select>
 </div>
-
+<p>Sincefrely, <input value="professor" id="name" length=100>
 <hr>
 <p style="font-size:100%;">Pull requests welcome in <a href="https://github.com/aandreev0/phd-template">github repo</a>
   </body>
