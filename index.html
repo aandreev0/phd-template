@@ -8,7 +8,6 @@
     for(var i=0;i<allSelects.length;i++){
       var jj = Math.floor(Math.random() * (allSelects[i].options.length-1)) + 2;
       allSelects[i].value = jj;
-      console.log(jj);
     }
     var unis = ['Awesome', 'Best', 'Very best', 'Prestigious', 'Most Venerable', 'Interdisciplinary', 'Oldest','Newest', 'Largest'];
     var unis2 = ['College', 'University', 'School', 'Institute'];
@@ -16,22 +15,20 @@
 
     document.getElementById('program').value = programs[ Math.floor(Math.random() * (programs.length))];
     document.getElementById('uni').value = unis[ Math.floor(Math.random() * (unis.length))] + ' '+unis2[ Math.floor(Math.random() * (unis2.length))];
-
-
   }
 
 </script>
 </head>
 <body style="font-size:130%;line-height:140%;">
   <style>
-    select,input {font-size:110%;}
+    select,input {font-size:100%;}
     </style>
 <div style="xwidth:800px;">
   <h2>Template for PI welcoming new student to the lab</h2>
   <a href="#" onClick="randomizeOptions()">Randomize</a> ♻️
 <p>Welcome to your PhD program in <input length="100" value="program" id="program"> at the <input style="width:250px;" value="university" id="uni">!
 
-<p>You will be working 
+<p>You will be working
 <select>
   <option value="1"></option>
   <option value="2">mostly on your own</option>
