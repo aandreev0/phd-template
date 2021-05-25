@@ -3,7 +3,6 @@
 <title>PhD student welcoming email template</title>
 <script type="text/javascript">
   function randomizeOptions(){
-    console.log('Random!')
     var allSelects = document.getElementsByTagName("select");
     for(var i=0;i<allSelects.length;i++){
       var jj = Math.floor(Math.random() * (allSelects[i].options.length-2)) + 2;
@@ -24,6 +23,28 @@
       selectElement.parentNode.replaceChild(inp, selectElement);
     }
   }
+  function makePrintable(){
+
+    var allSelects = document.getElementsByTagName("select");
+
+    while(allSelects.length > 0){
+      var allSelects = document.getElementsByTagName("select");
+      var selectElement = allSelects[0];
+      var rep = document.createElement("b");
+      rep.innerHTML = selectElement.options[selectElement.selectedIndex].text;
+      selectElement.parentNode.replaceChild(rep, selectElement);
+    }
+    var inps =document.getElementsByTagName("input");
+
+    while(inps.length > 0){
+      var inps = document.getElementsByTagName("input");
+      var inp = inps[0];
+      var rep = document.createElement("b");
+      rep.innerHTML = inp.value;
+      inp.parentNode.replaceChild(rep, inp);
+    }
+  }
+
 </script>
 </head>
 <body style="font-size:130%;line-height:140%;">
@@ -32,7 +53,8 @@
     </style>
 <div style="xwidth:800px;">
   <h2>Template for PI welcoming new student to the lab</h2>
-  <a href="#" onClick="randomizeOptions()">Randomize</a> ♻️
+  Start by <a href="#" onClick="randomizeOptions()">randomizing</a> ♻️
+<hr>
 <p>Welcome to your PhD program in <input length="100" value="program" id="program"> at the <input style="width:250px;" value="university" id="uni">!
 
 <p>You will be working
@@ -52,8 +74,18 @@
     <option value="3">will be loosely based on current work in lab</option>
     <option value="4">will closely follow ongoing project</option>
     <option value ="x">[custom]</option>
-
   </select>
+
+<p>PhDs in my lab are funded
+  <select onChange="replaceSelectWithInput(this)">
+    <option value="1"></option>
+    <option value="2">100% by grants</option>
+    <option value="3">mostly by grants, sometimes by fellowships</option>
+    <option value="4">mostly by fellowships</option>
+    <option value="5">only by fellowships</option>
+    <option value ="x">[custom]</option>
+  </select>
+
 
 <p>As your PI, I expect that you
   <select onChange="replaceSelectWithInput(this)">
@@ -63,8 +95,10 @@
     <option value="4">pick your own hours</option>
     <option value="5">work as much as humanly possible</option>
     <option value ="x">[custom]</option>
+  </select>
 
-  </select> and
+  and
+
   <select onChange="replaceSelectWithInput(this)">
     <option value="1"></option>
     <option value="2">have flexible schedule</option>
@@ -99,7 +133,6 @@
   <option value="3">within 3-6 hours</option>
   <option value="4">within 24 hours</option>
   <option value ="x">[custom]</option>
-
 </select>
 
 <p>Successful PhD thesis requires at least
@@ -226,7 +259,7 @@
       <option value="4">somewhere, you will have to figure for yourself</option>
       <option value ="x">[custom]</option>
     </select>
-    
+
 <p>You should start interviewing for your next job
   <select onChange="replaceSelectWithInput(this)">
       <option value="1"></option>
@@ -247,6 +280,7 @@
 </div>
 <p>Sincerely, <input value="professor" id="name" length=100>
 <hr>
+<a href="#" onClick="makePrintable()">Make printable version</a>
 <p style="font-size:100%;">Pull requests welcome in <a href="https://github.com/aandreev0/phd-template">github repo</a>
   </body>
   </html>
