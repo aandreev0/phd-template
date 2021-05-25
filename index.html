@@ -50,6 +50,8 @@
 <body style="font-size:130%;line-height:140%;">
   <style>
     select,input {font-size:100%;}
+    p{margin:7px 0px 1px 5px;}
+    b{font-weight:normal;font-style:italic;}
     </style>
 <div style="xwidth:800px;">
   <h2>Template for PI welcoming new student to the lab</h2>
@@ -104,7 +106,6 @@
     <option value="2">have flexible schedule</option>
     <option value="3">be here when I am here</option>
     <option value ="x">[custom]</option>
-
   </select>
 <p>Work on weekends is
 <select onChange="replaceSelectWithInput(this)">
@@ -113,7 +114,6 @@
   <option value="3">OK only when necessary</option>
   <option value="4">followed by reduced hours during next week</option>
   <option value ="x">[custom]</option>
-
 </select>
 <p>If you want to take time off
 <select onChange="replaceSelectWithInput(this)">
@@ -143,7 +143,6 @@
     <option value="4">few submitted or accepted papers</option>
     <option value="5">one preprint or a few conference presentations</option>
     <option value ="x">[custom]</option>
-
   </select>
 
 <p>Your qualifying exam
@@ -154,14 +153,12 @@
     <option value="4">requires data and concrete results</option>
     <option value="5">requires a draft of a paper</option>
     <option value ="x">[custom]</option>
-
   </select> and
   <select onChange="replaceSelectWithInput(this)">
     <option value="1"></option>
     <option value="2">includes exam based on coursework</option>
     <option value="3">has no exam requirements</option>
     <option value ="x">[custom]</option>
-
   </select>
 <p>Thesis manuscript
   <select onChange="replaceSelectWithInput(this)">
@@ -169,8 +166,17 @@
     <option value="2">can be "stapled papers" with original intro</option>
     <option value="3">should be completely original, no copy-pasting</option>
     <option value ="x">[custom]</option>
-
   </select>
+
+<p>I expect students in my lab to finish PhD
+  <select onChange="replaceSelectWithInput(this)">
+    <option value="1"></option>
+    <option value="2">within 5 years</option>
+    <option value="3">within 5-7 years</option>
+    <option value="4">eventually</option>
+    <option value ="x">[custom]</option>
+    </select>
+
   <p>When writing your first-author papers
     <select onChange="replaceSelectWithInput(this)">
       <option value="1"></option>
@@ -178,7 +184,6 @@
       <option value="3">I will do most of the writing</option>
       <option value="4">I will provide only limited editing</option>
       <option value ="x">[custom]</option>
-
     </select>
 
 <p>Travel to conferences
@@ -189,7 +194,6 @@
     <option value="4">is discouraged</option>
     <option value="5">is prohibited until paper is out</option>
     <option value ="x">[custom]</option>
-
   </select>
 
   <p>Our one-on-one meetings
@@ -199,7 +203,6 @@
       <option value="3">are weekly</option>
       <option value="4">happen any time I pop into the lab</option>
       <option value ="x">[custom]</option>
-
     </select>
     and our lab meetings are
     <select onChange="replaceSelectWithInput(this)">
@@ -209,7 +212,6 @@
       <option value="4">a short presentation of recent results</option>
       <option value="5">a discussion of any problem you have</option>
       <option value ="x">[custom]</option>
-
     </select>
 <p>During our journal club meetings we are
   <select onChange="replaceSelectWithInput(this)">
@@ -229,7 +231,6 @@
       <option value="4">should be minimal</option>
       <option value="5">are encouraged, you should look for one</option>
       <option value ="x">[custom]</option>
-
     </select>
 <p>Pre-prints publications (such as BioArxv)
   <select onChange="replaceSelectWithInput(this)">
@@ -247,7 +248,7 @@
       <option value="2">discussed at some point, I guess</option>
       <option value="3">too political for me to get involved</option>
       <option value="4">discussed very early in project</option>
-      <option value="5">definned by postdocs</option>
+      <option value="5">defined by postdocs</option>
       <option value ="x">[custom]</option>
     </select>
 
